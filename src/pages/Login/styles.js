@@ -16,21 +16,61 @@ export const BackGround = styled.div`
 `
 
 export const Container = styled.div`
-    height: 60vh;
-    width: 25vw;
+    height: 65vh;
+    width: 28vw;
+
 
     margin: auto;
-    
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
     justify-content: center;
-    align-content: space-around;
+    align-content: center;
+
     
-    background: rgb(2 6 16 / 75%);
+    background-color: #fff;
     border-radius: 5px;
-
     
+    form{
 
+        width: 25vw;
+        height:45vh;
+        
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content:center;
+
+        button:first-of-type{
+
+        }
+    }
+    .error{
+        width:16vw;
+        height: 2vh;
+        margin-bottom: 10px;
+        color: red;
+        font-size: 15px;
+        text-align:left;
+    }
+
+`
+
+export const Title = styled.div`
+    width:18vw;
+
+    margin-top:1vw;
+    margin-bottom:1vw;
+
+    text-align: center;
+
+    label {    
+        font-weight: 600;
+        font-size: 19px;
+
+        color: #0d1128;
+    }
+    p{
+        opacity: 0.6;
+    }
 `
 

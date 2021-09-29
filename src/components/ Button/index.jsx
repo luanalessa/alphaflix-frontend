@@ -8,6 +8,7 @@ export default function Button(props) {
             className={props.className}
             disabled={props.isDisabled}
             width={props.width}
+            type="submit"
         >
             {props.children}
         </ButtonComponent>

@@ -5,7 +5,7 @@ import alert from '../../assets/alert.svg'
 
 
 export const Bar = styled.div`
-    width: 100vw;
+    width: 100%;
     height: 13vh;
    
     display: flex;
@@ -13,7 +13,7 @@ export const Bar = styled.div`
     align-content: center;
     flex-wrap: nowrap;
   
-    background: #353535;
+    background: #0D1026;
 
 `
 

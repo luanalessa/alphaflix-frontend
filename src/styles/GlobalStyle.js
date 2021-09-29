@@ -1,5 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 
+import background from '../assets/background.svg'
+
 export default createGlobalStyle`
   :root {
     --primary: #185adb;
@@ -15,6 +17,8 @@ export default createGlobalStyle`
 
   body, input, button {
     font: 400 1rem sans-serif;
+    background-image: url(${background});
+
   }
   
   input, button {

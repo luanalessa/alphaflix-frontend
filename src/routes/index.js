@@ -14,5 +14,6 @@ export default function Router() {
                 <Route path="/home" component = { Home } />
 
             </Switch>
-        </BrowserRouter>)
+        </BrowserRouter>
+        )
 }
