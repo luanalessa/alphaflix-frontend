@@ -1,5 +1,8 @@
 import React from 'react'
-import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
+import { BrowserRouter, Switch, Redirect } from 'react-router-dom';
+
+import PrivateRoute from './PrivateRoute';
+import PublicRoute from './PublicRoute';
 
 import Login from '../pages/Login'
 import Home from '../pages/Home'
@@ -10,8 +13,8 @@ export default function Router() {
         <BrowserRouter>
             <Switch>
                 <Redirect exact to="/login" from="/" />
-                <Route path="/login" component = { Login } />
-                <Route path="/home" component = { Home } />
+                <PublicRoute restricted path="/login" component = { Login } />
+                <PrivateRoute path="/home" component = { Home } />
 
             </Switch>
         </BrowserRouter>
