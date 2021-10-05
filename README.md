@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+# <p align = "center"> dt money </p>
+<p align = "center">
+<img src="https://img.shields.io/badge/author-luanalessa-4dae71?style=flat-square" />
+ <img src="https://img.shields.io/github/languages/count/luanalessa/alphaflix-frontend?color=4dae71&style=flat-square" />
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+</br>
+<br/>
+<p align="center"><img src="https://user-images.githubusercontent.com/72531277/136117240-ed13ac4f-3f27-45a9-b455-5649c7a3b556.png"/></p>
 
-## Available Scripts
+</br>
 
-In the project directory, you can run:
+<h1><p align="center"> 🚧 Repository under construction 👷‍♀️</p></h1>
+<p align="center">Updating the README, with explanations and utilities, while I build the project. Feel free to contribute!</p>
 
-### `yarn start`
+<br/>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## <p align = "left"> 🟣 Technologies</p>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- [ReactJS](https://reactjs.org/)
+- [Axios](https://axios-http.com/docs/intro)
+- [styled-components](https://styled-components.com//)
+- [JWT](https://jwt.io/)
 
-### `yarn test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
+</br>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# 🏁 Getting Started 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), so you need to install [Node.js](https://nodejs.org/en/download/) and [npm](https://www.npmjs.com/) first, in order to test the project.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Then, clone the repository with:
 
-### `yarn eject`
+```
+git clone https://github.com/luanalessa/alphaflix-frontend.git
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+So, in the project directory, you can run:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+npm install
+```
+to install the dependencies.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Then, run
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```
+npm start
+```
 
-## Learn More
+to open the project on [localhost](http://localhost:3000) in your browser.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+:stop_sign: Don't forget to repeat the steps above with the [backend repository](https://github.com/luanalessa/alphaflix-backend.git) to fully test the project
