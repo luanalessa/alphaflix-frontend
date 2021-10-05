@@ -4,7 +4,8 @@ import Header from '../../components/Header'
 import Slide from '../../components/Slide'
 import MovieList from '../../components/MovieList'
 
-export default function Login() {
+const Home = () => 
+{
     return (
         <>
             <Header page="home" className="clicked" ></Header>
@@ -16,3 +17,5 @@ export default function Login() {
         </>
     )
 }
+
+export default Home;

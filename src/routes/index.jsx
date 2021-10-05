@@ -15,7 +15,6 @@ export default function Router() {
                 <Redirect exact to="/login" from="/" />
                 <PublicRoute restricted path="/login" component = { Login } />
                 <PrivateRoute path="/home" component = { Home } />
-
             </Switch>
         </BrowserRouter>
         )

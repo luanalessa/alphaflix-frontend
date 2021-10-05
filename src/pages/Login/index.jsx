@@ -1,14 +1,17 @@
 import React from 'react'
 import { Formik, Form, Field, ErrorMessage } from 'formik';
+import { useHistory } from 'react-router-dom';
 
 import { LoginSchema } from '../../services/validation'
+import { login } from '../../services/controllers'
 
 import * as S from './styles'
 import Input from '../../components/Input'
 import Button from '../../components/ Button'
 
-export default function Login() {
-
+const Login = () => 
+{   
+    const navigate = useHistory();
 
     return (
         <S.BackGround>
@@ -24,7 +27,13 @@ export default function Login() {
                         password: '',
                     }}
                     validationSchema={LoginSchema}
-                    onSubmit={values => console.log(values)}>
+                    onSubmit={
+                        data => 
+                            login(data)
+                                .then(response =>  
+                                    navigate.push("home")
+                                    )
+                            }>
                     <Form>
                         
                         <Field
@@ -44,7 +53,7 @@ export default function Login() {
                             as={Input} />
                         <ErrorMessage name="password" component="label" className="error"/>
 
-                        <Button className="type-green" width="400px">Entrar</Button>
+                        <Button className="type-green" width="400px" >Entrar</Button>
                         <Button className="type-white">Registrar</Button>
                     </Form>
                 </Formik>
@@ -52,3 +61,5 @@ export default function Login() {
         </S.BackGround>
     )
 }
+
+export default Login;
