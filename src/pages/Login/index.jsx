@@ -1,6 +1,7 @@
 import React from 'react'
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import { useHistory } from 'react-router-dom';
+import api from '../../services/api';
 
 import { LoginSchema } from '../../services/validation'
 import { login } from '../../services/controllers'
@@ -12,6 +13,18 @@ import Button from '../../components/ Button'
 const Login = () => 
 {   
     const navigate = useHistory();
+
+    const login = (data) => {
+        api.post('http://localhost:8000/login', data)
+        .then(response => {
+            if (response.status === 200) {
+                localStorage.setItem('token', response.data);
+                navigate.push("home");
+                return true
+            }
+            else return false;
+        })
+    }
 
     return (
         <S.BackGround>
@@ -27,13 +40,7 @@ const Login = () =>
                         password: '',
                     }}
                     validationSchema={LoginSchema}
-                    onSubmit={
-                        data => 
-                            login(data)
-                                .then(response =>  
-                                    navigate.push("home")
-                                    )
-                            }>
+                    onSubmit={ data => login(data)}>
                     <Form>
                         
                         <Field
