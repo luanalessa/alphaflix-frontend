@@ -17,7 +17,6 @@ export const ModalStyle = {
       width: '950px',
       height: '550px',
       position: 'absolute',
-      top: '7vw',
       border: 'none',
       backgroundColor: '#021822',
       overflow: 'auto',
@@ -46,12 +45,18 @@ export const Container = styled.div`
       margin-bottom: 20px;
     }
     figure{
-      width: 330px;
+      width: 290px;
       height: 410px;
-      background: #1c4758;
 
       border-radius: 10px;
       margin-left: 50px;
+
+      img{
+        width: 290px;
+        height: 410px;
+        border-radius: 10px;
+        box-shadow: #0000006e 2px 8px 20px 0px;
+      }
     }
     caption{
       width: 420px;

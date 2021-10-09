@@ -1,5 +1,4 @@
-import React from 'react';
-import { useState } from 'react';
+import React, {useContext} from 'react';
 import Modal from 'react-modal';
 
 import {RiMovie2Fill} from 'react-icons/ri'
@@ -12,10 +11,12 @@ import Button from '../ Button'
 import * as S from './style'
 import Favorite from '../../assets/favorite.svg'
 import close from "../../assets/close.svg"
+import { MovieContext } from '../../providers/MovieProvider';
 
 
 export default function MovieDescriptionModal(props) {
-    console.log(props.movies)
+    const { movies, genres, selected } = useContext(MovieContext);
+
 
     return ( 
     <Modal
@@ -37,20 +38,20 @@ export default function MovieDescriptionModal(props) {
             </section>
        
             <figure>
-                {/* <img  alt="Movie Poster" src=""/> */}
+                <img  alt="Movie Poster" src={selected?.poster}/>
             </figure>
             <caption>
-                <h1>Nome do filme aqui</h1>
+                <h1>{selected?.title}</h1>
                 <pre>
-                    < BsFillBookmarkFill class="movie-icon"/> <label> Ação </label>
+                    < BsFillBookmarkFill class="movie-icon"/> <label> {selected?.genre} </label>
                 </pre>
                 <pre>
-                    < IoIosTime class="movie-icon"/> <label> 92 min </label>
+                    < IoIosTime class="movie-icon"/> <label>{selected?.runtime} </label>
                 </pre>
                 <pre>
-                    < RiMovie2Fill class="movie-icon"/> <label> Luana Lessa </label>
+                    < RiMovie2Fill class="movie-icon"/> <label> {selected?.director} </label>
                 </pre>
-                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vestibulum sed lacus non vehicula. Mauris fringilla maximus mauris et ornare. Maecenas in cursus nunc. Nunc lacinia erat vitae augue finibus, ac maximus leo commodo. Etiam quis sagittis neque. Donec sapien nulla, maximus vel rhoncus id, dictum nec elit. Sed quis mollis justo. Interdum et malesuada fames ac ante ipsum primis in faucibus."</p>
+                <p>{selected?.description}</p>
                 <div class="movie-btn">
                 <Button className="type-green" >Alugar</Button>
                 <button class="liked-btn"><IoIosHappy/></button>
