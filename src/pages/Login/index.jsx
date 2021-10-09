@@ -10,6 +10,7 @@ import * as S from './styles'
 import Input from '../../components/Input'
 import Button from '../../components/ Button'
 
+import logo from '../../assets/logo.svg'
 const Login = () => 
 {   
     const navigate = useHistory();
@@ -29,7 +30,10 @@ const Login = () =>
     return (
         <S.BackGround>
             <S.Container>
+            <img src={logo} alt="Logo" id="logo-login"/>
+
             <S.Title>
+
                 <label>Você está no AlphaFlix</label>
                 <p>o melhor serviço inexistente de streaming do mundo</p>
             </S.Title>
@@ -53,6 +57,7 @@ const Login = () =>
 
                         <Field
                             id="password"
+                            type="password"
                             name="password"
                             placeholder="Senha"
                             isSecret="true" 

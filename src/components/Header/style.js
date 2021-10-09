@@ -13,7 +13,7 @@ export const Bar = styled.div`
     align-content: center;
     flex-wrap: nowrap;
   
-    background: #0D1026;
+    background: #023044;
 
 `
 

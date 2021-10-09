@@ -7,8 +7,9 @@ export const BackGround = styled.div`
     height: 100vh;
     width: 100vw;
 
-    background-size: cover ;
-    background-image: url(${background});
+    background: #023044;
+    /* background-size: cover ; */
+    /* background-image: url(${background}); */
 
     display: flex;
     justify-content: center;
@@ -16,7 +17,7 @@ export const BackGround = styled.div`
 `
 
 export const Container = styled.div`
-    height: 65vh;
+    height: 70vh;
     width: 28vw;
 
 
@@ -27,9 +28,13 @@ export const Container = styled.div`
     align-content: center;
 
     
-    background-color: #fff;
+    background-color: #ffffff0d;
     border-radius: 5px;
     
+    #logo-login{
+        margin-top: 1vw;
+        
+    }
     form{
 
         width: 25vw;
@@ -56,21 +61,26 @@ export const Container = styled.div`
 `
 
 export const Title = styled.div`
-    width:18vw;
+    width:30vw;
 
     margin-top:1vw;
-    margin-bottom:1vw;
 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     text-align: center;
 
     label {    
         font-weight: 600;
-        font-size: 19px;
+        font-size: 18px;
 
-        color: #0d1128;
+        color: white;
     }
     p{
-        opacity: 0.6;
+        width:17vw;
+        margin-top:0.3vw;
+        color: white;
+        opacity: 0.4;
     }
 `
 

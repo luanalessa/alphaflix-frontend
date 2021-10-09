@@ -25,66 +25,77 @@ export const Title = styled.div`
     font-family: Roboto;
     font-style: normal;
     font-weight: 500;
-    font-size: 25px;
-    line-height: 29px;
+    font-size: 18px;
     text-align: left;
 
+    display: flex;
+    align-items: center;
     color: white;
+
+    margin-bottom: 10px;
+
+    .left-icon{
+        font-size: 20px;
+        margin-left: 10px;
+    }
 
 `
 export const Cards = styled.div`
-    width: 140px;
-    height: 180px;
+    width: 190px;
+    height: 260px;
 
     margin-top: 10px;
 
     display: flex;
     flex-wrap: wrap;
-    justify-content:center;
+    justify-content:flex-end;
+
+    cursor: pointer;
 
     ~:nth-child(n){
         margin-left: 20px;
     }
 
-    border: 1px solid white;
-    border-radius: 10px;
+    border: 0;
 
     .movie-card { 
         width: 100%;
         height: 100%;
-        border-radius: 10px;
+        border-radius: 5px;
     }
 
+ 
     .icon{
-        width: 25px;
-        height: 25px;
+        width: 30px;
+        height: 30px;
 
-        opacity: 0.6;
+        margin-bottom: 5px;
+        color: white;
+        opacity: 0.3;
+    }
+    .icon:hover{
+        color: #53b04b;
     }
 
     .movie-info {
-        width: 125px;
+        width: 50px;
         
         position: absolute;
         color: black;
 
         align-self: flex-end;
 
-        margin-right:3px;
+     
 
-        display: flex;
-        flex-wrap: wrap;
-        align-content: center;
-        justify-content: space-between;
 
-        span {
+        /* span {
             width: 80px;
             height:25px;
             margin-bottom: 10px;
             font-weight: 600;
             font-size: 13px;
             
-        }
+        } */
 
     }
 

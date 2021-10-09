@@ -17,7 +17,7 @@ export default createGlobalStyle`
 
   body, input, button {
     font: 400 1rem sans-serif;
-    background-image: url(${background});
+    background: #021822;
 
   }
   
