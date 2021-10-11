@@ -14,6 +14,7 @@ const Home = (props) =>
 {   const { movies, genres } = useContext(MovieContext);
     const [isMovieDescriptionModal, setIsMovieDescriptionModal] = useState(false)
 
+
     const handleOpenMovieDescriptionModal = () => {
         setIsMovieDescriptionModal(true)
         console.log(isMovieDescriptionModal)

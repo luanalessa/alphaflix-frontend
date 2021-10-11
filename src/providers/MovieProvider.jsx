@@ -20,20 +20,6 @@ export const MovieProvider = (props) => {
 
     const [ selected, setSelected ] = useState();
 
-    const [ cart, setCart ] = useState();
-
-    // const getMovies = useCallback(() => {
-    //     api.get('http://localhost:8000/home')
-    //         .then(response => setMovies(response.data))
-    //         .catch(err => console.log(err))
-    //   }, [])
-
-      
-    // const getGenres = useCallback(() => {
-    //         api.get('http://localhost:8000/home/genres')
-    //             .then(response => setGenres(response.data))
-    //             .catch(err => console.log(err))
-    // }, [])
     
     return(
         <MovieContext.Provider

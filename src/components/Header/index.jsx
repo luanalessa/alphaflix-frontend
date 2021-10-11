@@ -1,16 +1,31 @@
-import React from 'react';
+import React, {useContext,useEffect, useState} from 'react';
 import { useHistory } from 'react-router-dom';
 import {FaShoppingCart} from 'react-icons/fa'
 import * as S from './style';
 
+import api from '../../services/api.js'
 
-
+import { CartContext } from '../../providers/CartProvider';
+import { MovieContext } from '../../providers/MovieProvider';
 export default function Header(props) {
     const navigate = useHistory();
+    const [update, setUpdate] = useState(false);
+    const { cart, setCart, delMovie,checkOut } = useContext(CartContext);
+
 
     const handlePage = (page) => {
+        if(page === 'cart'){
+            setUpdate(!update)
+        }
         navigate.push(page)
     }
+
+    useEffect(()=>{
+        api.get('http://localhost:8000/cart' )
+            .then(response => setCart(response.data))
+            .catch(err => console.log(err))
+         }, [update])
+
     return (
         <S.Bar>
             <S.Logo alt="Logo" />
