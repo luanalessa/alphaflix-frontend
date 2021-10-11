@@ -11,15 +11,15 @@ export const Bar = styled.div`
     display: flex;
     justify-content: center;
     align-content: center;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
   
     background: #023044;
 
 `
 
 export const Logo = styled.div`
-    width: 3.3vw;
-    height: 7vh;
+    width: 40px;
+    height: 40px;
 
     margin: auto;
     background-image: url(${logo});
@@ -27,40 +27,57 @@ export const Logo = styled.div`
 `
 
 export const Menu = styled.ul`
-    width: 45vw;
-    height: 4vh;
+    width: 800px;
+    height: 50px;
 
     display: flex;
     align-items: center;
-    margin: auto 20vw auto 0;
-
     color: #B6B6B6;
     opacity: 0.6;
     font-weight: 600;
     list-style-type: none;
 
     li {
-        width: 7vw;
-        margin: 0 2vw 0 2vw;
+        height: 30px;
+        margin: 0 3vw 0 3vw;
+        padding: 15px;
         text-align: center;
+        cursor: pointer;
 
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+
+        border-radius: 20px;
         &.clicked{
             color: #FFFFFF;
         }
 
+        &:hover{
+            background: #1c4758;
+        }
         
     }
 
 `
 
-export const Alert = styled.div`
+export const Cart = styled.div`
     width: 2vw;
     height: 4vh;
 
     margin: auto;
+    color: #B6B6B6;
+    opacity: 0.6;
+    font-size: 25px;
 
-    background-image: url(${alert});
-    background-size: cover;
+    cursor: pointer;
+
+    &.clicked{
+        color: #FFFFFF;
+    }
+
+    /* background-image: url(${alert});
+    background-size: cover; */
 `
 
 export const User = styled.div`

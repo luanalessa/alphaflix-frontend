@@ -7,7 +7,8 @@ export const MovieContext = createContext({});
 export const MovieProvider = (props) => {
     const [ movies, setMovies] = useState(()=>{
         api.get('http://localhost:8000/home')
-        .then(response => setMovies(response.data))
+        .then(response => {setMovies(response.data)
+        console.log(response.data)})
         .catch(err => console.log(err))
     });
 
@@ -19,6 +20,7 @@ export const MovieProvider = (props) => {
 
     const [ selected, setSelected ] = useState();
 
+    const [ cart, setCart ] = useState();
 
     // const getMovies = useCallback(() => {
     //     api.get('http://localhost:8000/home')

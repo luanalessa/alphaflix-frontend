@@ -11,11 +11,15 @@ import Button from '../ Button'
 import * as S from './style'
 import Favorite from '../../assets/favorite.svg'
 import close from "../../assets/close.svg"
+
 import { MovieContext } from '../../providers/MovieProvider';
+import { CartContext } from '../../providers/CartProvider';
 
 
 export default function MovieDescriptionModal(props) {
     const { movies, genres, selected } = useContext(MovieContext);
+    const { addMovie } = useContext(CartContext);
+
 
 
     return ( 
@@ -53,7 +57,7 @@ export default function MovieDescriptionModal(props) {
                 </pre>
                 <p>{selected?.description}</p>
                 <div class="movie-btn">
-                <Button className="type-green" >Alugar</Button>
+                <Button className="type-green" onClick={() => addMovie(selected)}>Alugar</Button>
                 <button class="liked-btn"><IoIosHappy/></button>
                 <button class="liked-btn"><HiEmojiSad/></button>
                 </div>

@@ -6,6 +6,8 @@ import PublicRoute from './PublicRoute';
 
 import Login from '../pages/Login'
 import Home from '../pages/Home'
+import Cart from '../pages/Cart'
+
 
 
 export default function Router() {
@@ -15,6 +17,8 @@ export default function Router() {
                 <Redirect exact to="/login" from="/" />
                 <PublicRoute restricted path="/login" component = { Login } />
                 <PrivateRoute path="/home" component = { Home } />
+                <PrivateRoute path="/cart" component = { Cart } />
+
             </Switch>
         </BrowserRouter>
         )

@@ -9,6 +9,7 @@ export default function Button(props) {
             disabled={props.isDisabled}
             width={props.width}
             type="submit"
+            onClick={props.onClick}
         >
             {props.children}
         </ButtonComponent>

@@ -19,7 +19,7 @@ const Login = () =>
         api.post('http://localhost:8000/login', data)
         .then(response => {
             if (response.status === 200) {
-                localStorage.setItem('token', response.data);
+                // document.cookie = `token= ${response.data}`;
                 navigate.push("home");
                 return true
             }

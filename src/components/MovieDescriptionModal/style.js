@@ -59,7 +59,7 @@ export const Container = styled.div`
       }
     }
     caption{
-      width: 420px;
+      width: 470px;
       height: 430px;
 
       display: flex;

@@ -23,4 +23,9 @@ export const ButtonComponent = styled.button`
         border-color: #297559;
         color: #53b04b;
     }
+
+    &.type-red{
+        color: white;
+        background: #c51b1b;
+    }
 `;
