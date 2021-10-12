@@ -20,14 +20,43 @@ export const MovieProvider = (props) => {
 
     const [ selected, setSelected ] = useState();
 
+    const [ myMovies, setMyMovies ] = useState();
+
+    const myList =  useCallback(() =>{
+        api.get('http://localhost:8000/home/mylist')
+        .then(response => setMyMovies(response.data))
+        .catch(err => console.log(err))
+    },[])
+
+    const [ favMovies, setFavMovies ] = useState();
+
+
+    const myFavorite =  useCallback( () =>{
+        api.get('http://localhost:8000/home/myfavorite')
+        .then(response => setFavMovies(response.data))
+        .catch(err => console.log(err))
+    },[])
     
+    const setFavorite =  useCallback( data =>{
+        api.post('http://localhost:8000/home/myfavorite', {title:data})
+        .then(response => console.log(response))
+        .catch(err => console.log(err))
+    },[])
+    
+    
+
     return(
         <MovieContext.Provider
             value={{
                 movies,
                 genres,
                 selected,
-                setSelected
+                setSelected,
+                myList,
+                myMovies,
+                favMovies,
+                myFavorite,
+                setFavorite
             }}
         >
 

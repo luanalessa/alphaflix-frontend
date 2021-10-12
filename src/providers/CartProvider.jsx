@@ -27,11 +27,7 @@ export const CartProvider = (props) => {
     const checkOut = useCallback((data) => {
         console.log(data)
         api.put('http://localhost:8000/cart/checkout',data)
-        .then(()=>{
-            api.get('http://localhost:8000/cart' )
-            .then(response => setCart(response.data))
-            .catch(err => console.log(err))  
-        })
+        .then(() => setCart([]))
         .catch(err => console.log(err))
     },[])
 

@@ -19,13 +19,14 @@ export default function MovieCart(props) {
     const { movies } = useContext(MovieContext);
     const { cart, setCart, delMovie,checkOut } = useContext(CartContext);
 
+    console.log(cart)
+
     const navigate = useHistory();
     const [update, setUpdate] = useState(false);
 
 
     const handleDelete= async(movie) => {
         await delMovie(movie.name)
-        console.log('eae')
         setUpdate(!update)
     }
 
@@ -37,7 +38,7 @@ export default function MovieCart(props) {
 
     useEffect(()=>{
         api.get('http://localhost:8000/cart' )
-            .then(response => setCart(response.data))
+            .then(response => { console.log(response)})
             .catch(err => console.log(err))  
         }, [update])
 

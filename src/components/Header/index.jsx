@@ -10,7 +10,9 @@ import { MovieContext } from '../../providers/MovieProvider';
 export default function Header(props) {
     const navigate = useHistory();
     const [update, setUpdate] = useState(false);
-    const { cart, setCart, delMovie,checkOut } = useContext(CartContext);
+    const { setCart } = useContext(CartContext);
+    const { myList } = useContext(MovieContext);
+
 
 
     const handlePage = (page) => {
@@ -34,10 +36,14 @@ export default function Header(props) {
                 onClick={()=> handlePage("home")}
                 className={props.page === "home" ? props.className : null}>Home</li>
                 <li 
-                onClick={()=> handlePage("mylist")}
+                onClick={()=> {
+                    myList();
+                    handlePage("mylist")
+                }}
                 className={props.page === "mylist" ? props.className : null}>Minha Lista</li>
                 <li 
-                onClick={()=> handlePage("favorite")}
+                onClick={()=> { handlePage("favorite")
+                }}
                 className={props.page === "favorite" ? props.className : null}>Favoritos</li>
             </S.Menu>
             <S.Cart 

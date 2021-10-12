@@ -17,7 +17,7 @@ import { CartContext } from '../../providers/CartProvider';
 
 
 export default function MovieDescriptionModal(props) {
-    const { movies, genres, selected } = useContext(MovieContext);
+    const { movies, genres, selected, setFavorite } = useContext(MovieContext);
     const { addMovie } = useContext(CartContext);
 
 
@@ -58,7 +58,7 @@ export default function MovieDescriptionModal(props) {
                 <p>{selected?.description}</p>
                 <div class="movie-btn">
                 <Button className="type-green" onClick={() => addMovie(selected)}>Alugar</Button>
-                <button class="liked-btn"><IoIosHappy/></button>
+                <button class="liked-btn" onClick={()=> setFavorite(selected.title)}><IoIosHappy/></button>
                 <button class="liked-btn"><HiEmojiSad/></button>
                 </div>
             </caption>

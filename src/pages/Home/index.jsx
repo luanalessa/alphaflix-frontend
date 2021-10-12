@@ -33,7 +33,7 @@ const Home = (props) =>
         <>
             <Header page="home" className="clicked" ></Header>            
             { genres ? genres.map(genre => 
-                <MovieList title={genre.title} onOpenNewTransactionModal={handleOpenMovieDescriptionModal}/>
+                <MovieList title={genre.title} movies={movies} onOpenNewTransactionModal={handleOpenMovieDescriptionModal}/>
             ) :  null}
 
             <MovieDescriptionModal
