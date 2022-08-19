@@ -8,10 +8,6 @@
 <p align="center"><img src="https://user-images.githubusercontent.com/72531277/136642816-abbb0f21-0125-4c9f-aa27-0838b2ab21f1.png"/></p>
 
 </br>
-
-<h1><p align="center"> 🚧 Repository under construction 👷‍♀️</p></h1>
-<p align="center">Updating the README, with explanations and utilities, while I build the project. Feel free to contribute!</p>
-
 <br/>
 
 ## <p align = "left"> 🟣 Technologies</p>
